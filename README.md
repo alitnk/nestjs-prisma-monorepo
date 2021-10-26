@@ -1,13 +1,12 @@
 # Nest Prisma Monorepo
-This template is what I came up after a few days learning about monorepos and microservices (so it's not perfect). I might or might not come back and maintain it, but if you wanna contribute and make it better, you are very welcome.
+This template the result of me learning about monorepos and microservices (so it's not perfect). Contributions are very welcome.
 
 ## Stack
 
-This template uses Nest.js, Nest's GraphQL library and Prisma.
-
-The `api` app is a clone of [this other awesome template](https://github.com/fivethree-team/nestjs-prisma-starter)
-
-Note that this package does not use lerna. It solely uses Yarn's workspaces.
+This template uses [Nest.js](https://nestjs.com/), [Nest's GraphQL library](https://docs.nestjs.com/graphql/quick-start) and [Prisma](https://prisma.io/).
+The `api` app is a clone of [this other awesome template](https://github.com/fivethree-team/nestjs-prisma-starter).
+Prettier and ESLint are also configured, you can lint the whole repository by running `yarn lint` in the root directory.
+Note that this package does not use lerna and and only uses `yarn`'s workspaces for managing the monorepo.
 Yarn version: `3.1.0`
 
 ## Structure
