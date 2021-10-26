@@ -4,16 +4,20 @@ This template is what I came up with after I learned about monorepos and played 
 
 ## About
 
-- [Nest.js](https://nestjs.com/) + JWT + Code-first GraphQL + REST + Swagger*
+- [Nest.js](https://nestjs.com/) + JWT + GraphQL (code-first) + REST + Swagger*
 - [Prisma](https://prisma.io/) + utilities
+- Front-end app **
+- Full Typescript support
 - Common package 
 - Core package + NestJS utilites
 - ESLint Ready (`yarn lint`)
 - Prettier Ready
 - CI for GitHub Actions
-- Yarn (berry) version `3.1.0`
+- Yarn (berry) version `3.1.0` (PnP disabled since it's not supported by NestJs and Prisma yet)
 
 \*The `api` app is a clone of [this other awesome template](https://github.com/fivethree-team/nestjs-prisma-starter)
+
+\*\* The front-end app is just a static HTML file, since people might use different frameworks with NestJS, so feel free to add a NextJS / NuxtJS / Angular / Svelte / etc. as your front-end
 
 ## Structure
 
@@ -24,16 +28,19 @@ This template follows [Nest.js's convention](https://docs.nestjs.com/cli/monorep
  ┣ 📂 apps
  ┃ ┣ 📂 api
  ┃ ┣ 📂 web
- ┃ ┗ 📂 Your next app (could be anything, a Next.js SPA, static HTML, express app, etc.)
+ ┃ ┗ 📂 etc.
  ┣ 📂 libs
- ┃ ┣ 📂 common
- ┃ ┣ 📂 core
+ ┃ ┣ 📂 common 
+ ┃ ┣ 📂 core 
  ┃ ┣ 📂 prisma
- ┃ ┗ 📂 Your next library
+ ┃ ┗ 📂 etc.
  ┣ 📜.eslintrc.js
  ┣ 📜.prettierrc
  ┣ 📜.yarnrc.yml
 ```
+- core and common are imported from your back-end apps.
+- prisma is used by your back-end apps that need database.
+- common is shared between all of your apps.
 
 ## How to import from other apps/libraries
 
