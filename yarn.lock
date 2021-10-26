@@ -5,47 +5,6 @@ __metadata:
   version: 5
   cacheKey: 8
 
-"@angular-devkit/core@npm:12.2.10":
-  version: 12.2.10
-  resolution: "@angular-devkit/core@npm:12.2.10"
-  dependencies:
-    ajv: 8.6.2
-    ajv-formats: 2.1.0
-    fast-json-stable-stringify: 2.1.0
-    magic-string: 0.25.7
-    rxjs: 6.6.7
-    source-map: 0.7.3
-  checksum: 58230695968b08e1f2fbdc70ff19bb7c92437830b678c10d3e876b0fb3ebfe3b0a83e65a81a353696e98fc4a07aec55be88d07dcef5d558ef54ddab24fd25c06
-  languageName: node
-  linkType: hard
-
-"@angular-devkit/schematics-cli@npm:12.2.10":
-  version: 12.2.10
-  resolution: "@angular-devkit/schematics-cli@npm:12.2.10"
-  dependencies:
-    "@angular-devkit/core": 12.2.10
-    "@angular-devkit/schematics": 12.2.10
-    ansi-colors: 4.1.1
-    inquirer: 8.1.2
-    minimist: 1.2.5
-    symbol-observable: 4.0.0
-  bin:
-    schematics: bin/schematics.js
-  checksum: 90eed641009b4e6ee1c774904818b4792c97e7ec3c3fd9c42692e1cae0fdb3a9bbe5070a7efd62a986cb6e5c2b8144393582d8c06feecc5e33ad1e35faf2ae8b
-  languageName: node
-  linkType: hard
-
-"@angular-devkit/schematics@npm:12.2.10":
-  version: 12.2.10
-  resolution: "@angular-devkit/schematics@npm:12.2.10"
-  dependencies:
-    "@angular-devkit/core": 12.2.10
-    ora: 5.4.1
-    rxjs: 6.6.7
-  checksum: 7d8325ed2287699b2675b603b602faccce121027c437c129e196ec5478d50de124390175390c377e9ed969a7846234737e7c40850ae2144d881f1c359feaa8ec
-  languageName: node
-  linkType: hard
-
 "@acme/api@workspace:apps/api":
   version: 0.0.0-use.local
   resolution: "@acme/api@workspace:apps/api"
@@ -139,6 +98,47 @@ __metadata:
     typescript: ^4.4.4
   languageName: unknown
   linkType: soft
+
+"@angular-devkit/core@npm:12.2.10":
+  version: 12.2.10
+  resolution: "@angular-devkit/core@npm:12.2.10"
+  dependencies:
+    ajv: 8.6.2
+    ajv-formats: 2.1.0
+    fast-json-stable-stringify: 2.1.0
+    magic-string: 0.25.7
+    rxjs: 6.6.7
+    source-map: 0.7.3
+  checksum: 58230695968b08e1f2fbdc70ff19bb7c92437830b678c10d3e876b0fb3ebfe3b0a83e65a81a353696e98fc4a07aec55be88d07dcef5d558ef54ddab24fd25c06
+  languageName: node
+  linkType: hard
+
+"@angular-devkit/schematics-cli@npm:12.2.10":
+  version: 12.2.10
+  resolution: "@angular-devkit/schematics-cli@npm:12.2.10"
+  dependencies:
+    "@angular-devkit/core": 12.2.10
+    "@angular-devkit/schematics": 12.2.10
+    ansi-colors: 4.1.1
+    inquirer: 8.1.2
+    minimist: 1.2.5
+    symbol-observable: 4.0.0
+  bin:
+    schematics: bin/schematics.js
+  checksum: 90eed641009b4e6ee1c774904818b4792c97e7ec3c3fd9c42692e1cae0fdb3a9bbe5070a7efd62a986cb6e5c2b8144393582d8c06feecc5e33ad1e35faf2ae8b
+  languageName: node
+  linkType: hard
+
+"@angular-devkit/schematics@npm:12.2.10":
+  version: 12.2.10
+  resolution: "@angular-devkit/schematics@npm:12.2.10"
+  dependencies:
+    "@angular-devkit/core": 12.2.10
+    ora: 5.4.1
+    rxjs: 6.6.7
+  checksum: 7d8325ed2287699b2675b603b602faccce121027c437c129e196ec5478d50de124390175390c377e9ed969a7846234737e7c40850ae2144d881f1c359feaa8ec
+  languageName: node
+  linkType: hard
 
 "@apollo/protobufjs@npm:1.2.2":
   version: 1.2.2
@@ -2102,6 +2102,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"acme@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "acme@workspace:."
+  dependencies:
+    "@nestjs/cli": ^8.1.4
+    "@types/node": ^16.11.5
+    "@typescript-eslint/eslint-plugin": ^5.2.0
+    "@typescript-eslint/parser": ^5.2.0
+    eslint: ^8.1.0
+    eslint-config-prettier: ^8.3.0
+    eslint-config-standard: ^16.0.3
+    eslint-plugin-import: ^2.25.2
+    eslint-plugin-node: ^11.1.0
+    eslint-plugin-prettier: ^4.0.0
+    eslint-plugin-promise: ^5.1.1
+    prettier: ^2.4.1
+    typescript: ^4.4.4
+  languageName: unknown
+  linkType: soft
+
 "acorn-globals@npm:^6.0.0":
   version: 6.0.0
   resolution: "acorn-globals@npm:6.0.0"
@@ -2250,26 +2270,6 @@ __metadata:
   checksum: 690ffb9408415fdab43686b3f92037ba0c8362f5d0709a123ba3fb546e6ad81414455f80a2b5cc432ce924afe9864671198f022bc331a19c072d4ede152ec3ca
   languageName: node
   linkType: hard
-
-"acme@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "acme@workspace:."
-  dependencies:
-    "@nestjs/cli": ^8.1.4
-    "@types/node": ^16.11.5
-    "@typescript-eslint/eslint-plugin": ^5.2.0
-    "@typescript-eslint/parser": ^5.2.0
-    eslint: ^8.1.0
-    eslint-config-prettier: ^8.3.0
-    eslint-config-standard: ^16.0.3
-    eslint-plugin-import: ^2.25.2
-    eslint-plugin-node: ^11.1.0
-    eslint-plugin-prettier: ^4.0.0
-    eslint-plugin-promise: ^5.1.1
-    prettier: ^2.4.1
-    typescript: ^4.4.4
-  languageName: unknown
-  linkType: soft
 
 "ansi-colors@npm:4.1.1, ansi-colors@npm:^4.1.1":
   version: 4.1.1
