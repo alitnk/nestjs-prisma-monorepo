@@ -36,12 +36,15 @@ This template follows [Nest.js's convention](https://docs.nestjs.com/cli/monorep
  ┃ ┃ ┃ ┣ 📜main.ts
  ┃ ┃ ┃ ┗ 📜schema.graphql
  ┃ ┃ ┣ 📂test
+ ┃ ┣ 📂someapp
  ┃ ┣ 📂landing
  ┃ ┗ 📂web
  ┣ 📂libs // Libraries
  ┃ ┣ 📂common
  ┃ ┣ 📂core
+ ┃ ┣ 📂somelib
  ┃ ┗ 📂prisma
+ ┣ 📜.nest-cli.json
  ┣ 📜.editorconfig
  ┣ 📜.eslintrc.js
  ┣ 📜.gitignore
