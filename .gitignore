@@ -92,12 +92,12 @@ fabric.properties
 /.yarn/cache
 /.pnp.*
 
-yarn.lock
+.env 
 
 # TSConfig
 
 /**/*.tsbuildinfo
 
-# Environment files
+# Generated files
 
-.env
+.generated

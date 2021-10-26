@@ -5,8 +5,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.js",
   "scripts": {
-    "start": "yarn build",
-    "postinstall": "yarn run build & yarn prisma generate",
+    "postinstall": "run-s generate build",
     "prebuild": "rimraf dist",
     "build": "tsc -p tsconfig.build.json",
     "build:watch": "tsc -p tsconfig.build.json -w --preserveWatchOutput",
@@ -20,11 +19,12 @@
     "studio": "yarn prisma studio",
     "generate": "yarn prisma generate",
     "generate:watch": "yarn prisma generate --watch",
-    "start:db": "yarn migrate:up && yarn prisma:generate && yarn seed",
+    "start:db": "run-s migrate:up generate seed",
     "seed": "yarn prisma db seed"
   },
   "devDependencies": {
     "@types/node": "^16.11.5",
+    "npm-run-all": "^4.1.5",
     "prisma": "^3.3.0",
     "rimraf": "^3.0.2",
     "ts-node": "^10.4.0",
@@ -35,6 +35,7 @@
     "@prisma/client": "^3.3.0"
   },
   "prisma": {
-    "seed": "ts-node prisma/seed.ts"
+    "schema": "./prisma/schema.prisma",
+    "seed": "ts-node ./prisma/seed.ts"
   }
 }

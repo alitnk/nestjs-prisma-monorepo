@@ -1,9 +1,11 @@
 {
   "name": "@acme/api",
-  "version": "0.1.0",
   "packageManager": "yarn@3.0.2",
   "private": true,
+  "main": "dist/main.ts",
+  "types": "dist/main.d.ts",
   "scripts": {
+    "postinstall": "yarn run build",
     "prebuild": "rimraf dist",
     "build": "nest build",
     "start": "nest start",
@@ -17,6 +19,7 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
+    "@acme/common": "workspace:*",
     "@acme/core": "workspace:*",
     "@acme/prisma": "workspace:*",
     "@devoxa/prisma-relay-cursor-connection": "2.0.3",
@@ -46,12 +49,13 @@
     "swagger-ui-express": "4.1.6"
   },
   "devDependencies": {
+    "@nestjs/cli": "^8.1.4",
     "@nestjs/testing": "8.0.6",
     "@types/bcrypt": "5.0.0",
     "@types/chance": "1.1.3",
     "@types/express": "4.17.13",
     "@types/jest": "^27.0.2",
-    "@types/node": "14.17.3",
+    "@types/node": "^16.11.5",
     "@types/supertest": "2.0.11",
     "chance": "1.1.8",
     "jest": "^27.3.1",
