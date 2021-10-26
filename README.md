@@ -3,14 +3,14 @@ This template is what I came up with after learning about monorepos and playing 
 
 ## About
 
-- [Nest.js](https://nestjs.com/)
-- [Prisma](https://prisma.io/)
-
 The `api` app is a clone of [this other awesome template](https://github.com/fivethree-team/nestjs-prisma-starter), so it already has JWT authentication, GraphQL (code first), REST API with Swagger covered.
 Prettier and ESLint are also configured, you can lint the whole repository by running `yarn lint` in the root directory.
 Note that this package does not use lerna and and only uses `yarn`'s workspaces for managing the monorepo.
 Yarn version: `3.1.0`
 You're free to use any frontend framework like Next.js as an app. 
+
+- [Nest.js](https://nestjs.com/)
+- [Prisma](https://prisma.io/)
 
 ## Structure
 
