@@ -1,3 +1,20 @@
 {
-  "extends": "./tsconfig.base.json"
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "acme/whatthe": [
+        "libs/whatthe/src"
+      ],
+      "acme/whatthe/*": [
+        "libs/whatthe/src/*"
+      ],
+      "@acme/somelibrary": [
+        "libs/somelibrary/src"
+      ],
+      "@acme/somelibrary/*": [
+        "libs/somelibrary/src/*"
+      ]
+    }
+  }
 }
