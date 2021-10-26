@@ -1,6 +1,6 @@
 # Nest Prisma Monorepo
 
-This template is what I came up with after I learned about monorepos and played with them for a while, hope you find it helpful to you!
+This template is what I came up with after I learned about monorepos and played with them for a while, hope you find it helpful!
 
 ## About
 
