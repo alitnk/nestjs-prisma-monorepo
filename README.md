@@ -1,5 +1,5 @@
 # Nest Prisma Monorepo
-This template the result of me learning about monorepos and microservices (so it's not perfect), contributions are very welcome.
+This template is what I came up with after learning about monorepos and playing with them for a few days, contributions are very welcome.
 
 ## Stack
 
@@ -11,7 +11,7 @@ Yarn version: `3.1.0`
 
 ## Structure
 
-This template follows [Nest.js's convention](https://docs.nestjs.com/cli/monorepo) of monorepo
+This template follows [Nest.js's convention](https://docs.nestjs.com/cli/monorepo) of monorepo, so there are Apps and then there are Libraries.
 
 ```
 📦nest-prisma-monorepo
