@@ -1,18 +1,19 @@
 # Nest Prisma Monorepo
 
-This template is what I came up with after learning about monorepos and playing with them for a few days, contributions are very welcome.
+This template is what I came up with after I learned about monorepos and played with them for a while, hope you find it helpful to you!
 
 ## About
 
-- [Nest.js](https://nestjs.com/)
-- [Prisma](https://prisma.io/)
+- [Nest.js](https://nestjs.com/) + JWT + Code-first GraphQL + REST + Swagger*
+- [Prisma](https://prisma.io/) + utilities
+- Common package 
+- Core package + NestJS utilites
 - ESLint Ready (`yarn lint`)
 - Prettier Ready
 - CI for GitHub Actions
 - Yarn (berry) version `3.1.0`
-- A default API workspace\*
 
-\*The `api` app is a clone of [this other awesome template](https://github.com/fivethree-team/nestjs-prisma-starter), so it already has JWT authentication, GraphQL (code first), REST API with Swagger covered.
+\*The `api` app is a clone of [this other awesome template](https://github.com/fivethree-team/nestjs-prisma-starter)
 
 ## Structure
 
@@ -40,7 +41,7 @@ To import an package (app or library) into another one:
 
 1. Add the package as a dependency like so:
 
-```json
+```json apps/api/package.json
 {
   "dependencies": {
     "@acme/common": "workspace:*"
@@ -48,7 +49,7 @@ To import an package (app or library) into another one:
 }
 ```
 
-Note that the `@acme/common` name, comes from the other package's `package.json` file.
+Note that the `@acme/common` name, comes from `libs/common/package.json`'s name key:
 
 ```json
 {
@@ -67,6 +68,8 @@ import { MyCommonModule } from '@acme/common';
 ## Notes about Prisma
 
 Instead of importing your Prisma modules from `@prisma/client`, now you import them from `@acme/prisma`.
+
+This way you can defined your schema in a "library" and then import the prisma client in different apps, accessing the same database.
 
 For instance:
 
