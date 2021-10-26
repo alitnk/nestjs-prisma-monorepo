@@ -1,0 +1,83 @@
+{
+  "name": "@acme/api",
+  "version": "0.1.0",
+  "packageManager": "yarn@3.0.2",
+  "private": true,
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "nest build",
+    "start": "nest start",
+    "start:dev": "nest start --watch",
+    "start:debug": "nest start --debug --watch",
+    "start:prod": "node dist/main",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage",
+    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
+    "test:e2e": "jest --config ./test/jest-e2e.json"
+  },
+  "dependencies": {
+    "@acme/core": "workspace:*",
+    "@acme/prisma": "workspace:*",
+    "@devoxa/prisma-relay-cursor-connection": "2.0.3",
+    "@nestjs/common": "^8.1.2",
+    "@nestjs/config": "1.0.1",
+    "@nestjs/core": "^8.1.2",
+    "@nestjs/graphql": "^9.1.1",
+    "@nestjs/jwt": "8.0.0",
+    "@nestjs/passport": "8.0.1",
+    "@nestjs/platform-express": "8.0.6",
+    "@nestjs/swagger": "5.0.9",
+    "apollo-server-core": "^3.4.0",
+    "apollo-server-express": "3.3.0",
+    "bcrypt": "5.0.1",
+    "class-transformer": "0.4.0",
+    "class-validator": "0.13.1",
+    "express": "^4.17.1",
+    "graphql": "^15.6.1",
+    "graphql-subscriptions": "1.2.1",
+    "liquidjs": "^9.28.2",
+    "liquidjs-color-filters": "^1.0.0",
+    "passport": "0.4.1",
+    "passport-jwt": "4.0.0",
+    "reflect-metadata": "0.1.13",
+    "rimraf": "3.0.2",
+    "rxjs": "^7.4.0",
+    "swagger-ui-express": "4.1.6"
+  },
+  "devDependencies": {
+    "@nestjs/testing": "8.0.6",
+    "@types/bcrypt": "5.0.0",
+    "@types/chance": "1.1.3",
+    "@types/express": "4.17.13",
+    "@types/jest": "^27.0.2",
+    "@types/node": "14.17.3",
+    "@types/supertest": "2.0.11",
+    "chance": "1.1.8",
+    "jest": "^27.3.1",
+    "supertest": "6.1.6",
+    "ts-jest": "^27.0.7",
+    "ts-loader": "9.2.6",
+    "ts-node": "10.2.1",
+    "tsconfig-paths": "3.10.1",
+    "typescript": "^4.4.4",
+    "webpack": "^5.59.1"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "src",
+    "testRegex": ".*\\.spec\\.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "collectCoverageFrom": [
+      "**/*.(t|j)s"
+    ],
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node"
+  }
+}

@@ -1,0 +1,3 @@
+apps/**/node_modules
+libs/**/node_modules
+node_modules

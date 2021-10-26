@@ -1,0 +1,36 @@
+{
+  "name": "@acme/prisma",
+  "packageManager": "yarn@3.1.0",
+  "private": true,
+  "main": "dist/index.js",
+  "types": "dist/index.d.js",
+  "scripts": {
+    "start": "yarn build",
+    "postinstall": "yarn run build & yarn prisma generate",
+    "prebuild": "rimraf dist",
+    "build": "tsc -p tsconfig.build.json",
+    "build:watch": "tsc -p tsconfig.build.json -w --preserveWatchOutput",
+    "start:dev": "yarn run build:watch",
+    "migrate:dev": "prisma migrate dev --preview-feature",
+    "migrate:dev:create": "prisma migrate dev --create-only --preview-feature",
+    "migrate:reset": "prisma migrate reset --preview-feature",
+    "migrate:deploy": "yarn prisma migrate deploy --preview-feature",
+    "migrate:status": "yarn prisma migrate status --preview-feature",
+    "migrate:resolve": "yarn prisma migrate resolve --preview-feature",
+    "studio": "yarn prisma studio",
+    "generate": "yarn prisma generate",
+    "generate:watch": "yarn prisma generate --watch",
+    "start:db": "yarn migrate:up && yarn prisma:generate && yarn seed",
+    "seed": "yarn prisma db seed"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.5",
+    "prisma": "^3.3.0",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.4.4"
+  },
+  "dependencies": {
+    "@acme/core": "workspace:*",
+    "@prisma/client": "^3.3.0"
+  }
+}
