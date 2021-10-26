@@ -19,30 +19,12 @@ This template follows [Nest.js's convention](https://docs.nestjs.com/cli/monorep
 
 ```
 📦nest-prisma-monorepo
- ┣ 📂apps // nest.js, next.js, etc. apps
+ ┣ 📂apps
  ┃ ┣ 📂api
- ┃ ┃ ┣ 📂src
- ┃ ┃ ┃ ┣ 📂configs
- ┃ ┃ ┃ ┣ 📂controllers
- ┃ ┃ ┃ ┣ 📂decorators
- ┃ ┃ ┃ ┣ 📂guards
- ┃ ┃ ┃ ┣ 📂models
- ┃ ┃ ┃ ┃ ┣ 📂args
- ┃ ┃ ┃ ┃ ┣ 📂inputs
- ┃ ┃ ┃ ┃ ┣ 📂pagination
- ┃ ┃ ┃ ┣ 📂resolvers
- ┃ ┃ ┃ ┃ ┣ 📂auth
- ┃ ┃ ┃ ┃ ┣ 📂post
- ┃ ┃ ┃ ┃ ┣ 📂user
- ┃ ┃ ┃ ┣ 📂services
- ┃ ┃ ┃ ┣ 📜app.module.ts
- ┃ ┃ ┃ ┣ 📜main.ts
- ┃ ┃ ┃ ┗ 📜schema.graphql
- ┃ ┃ ┣ 📂test
  ┃ ┣ 📂someapp
  ┃ ┣ 📂landing
  ┃ ┗ 📂web
- ┣ 📂libs // Libraries
+ ┣ 📂libs
  ┃ ┣ 📂common
  ┃ ┣ 📂core
  ┃ ┣ 📂somelib
