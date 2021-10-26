@@ -1,5 +1,5 @@
 # Nest Prisma Monorepo
-This template the result of me learning about monorepos and microservices (so it's not perfect). Contributions are very welcome.
+This template the result of me learning about monorepos and microservices (so it's not perfect), contributions are very welcome.
 
 ## Stack
 
