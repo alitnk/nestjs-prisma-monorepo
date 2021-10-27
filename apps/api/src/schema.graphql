@@ -33,7 +33,7 @@ type Mutation {
   changePassword(data: ChangePasswordInput!): User!
   createPost(data: CreatePostInput!): Post!
   login(data: LoginInput!): Auth!
-  refreshToken: Token!
+  refreshToken(token: String!): Token!
   signup(data: SignupInput!): Auth!
   updateUser(data: UpdateUserInput!): User!
 }
@@ -80,15 +80,32 @@ type PostEdge {
 
 input PostOrder {
   direction: OrderDirection!
+  field: PostOrderField!
+}
+
+"""Properties by which post connections can be ordered."""
+enum PostOrderField {
+  content
+  createdAt
+  id
+  published
+  title
+  updatedAt
 }
 
 type Query {
   hello(name: String!): String!
   helloWorld: String!
   me: User!
-  post: Post!
-  publishedPosts(orderBy: PostOrder, query: String): PostConnection!
-  userPosts: [Post!]!
+  post(postId: String!): Post!
+  publishedPosts(after: String, before: String, first: Int, last: Int, orderBy: PostOrder, query: String, skip: Int): PostConnection!
+  userPosts(userId: String!): [Post!]!
+}
+
+"""User role"""
+enum Role {
+  ADMIN
+  USER
 }
 
 input SignupInput {
@@ -119,8 +136,13 @@ input UpdateUserInput {
 type User {
   """Identifies the date and time when the object was created."""
   createdAt: Date!
+  email: String!
+  firstname: String
   id: ID!
+  lastname: String
+  phone: String!
   posts: [Post!]!
+  role: Role!
 
   """Identifies the date and time when the object was last updated."""
   updatedAt: Date!

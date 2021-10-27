@@ -33,6 +33,7 @@ export function Paginated<TItem>(
 
     @Field(() => [classRef], { nullable: true })
     // nodes: TItem[];
+    
     @Field(() => Int)
     totalCount: number;
 
