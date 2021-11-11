@@ -85,3 +85,7 @@ import { PrismaClient } from '@acme/prisma';
 
 const prisma = new PrismaClient();
 ```
+
+## Alternatives
+
+- https://nx.dev/
