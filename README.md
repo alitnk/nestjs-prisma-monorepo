@@ -88,4 +88,4 @@ const prisma = new PrismaClient();
 
 ## Alternatives
 
-- https://nx.dev/
+- https://nx.dev/ (Currently, I just use NX. I didn't know about NX while making this template)
