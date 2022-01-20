@@ -72,7 +72,7 @@ import { MyCommonModule } from '@acme/common';
 
 > Note: After cloning, replace all `acme`s with your organization/project name.
 
-## Notes about Prisma
+## Note about Prisma
 
 Instead of importing your Prisma modules from `@prisma/client`, now you import them from `@acme/prisma`.
 
@@ -85,6 +85,10 @@ import { PrismaClient } from '@acme/prisma';
 
 const prisma = new PrismaClient();
 ```
+
+## Note about .env files
+
+After you clone the template, you gotta create two environment files, one in `apps/api` and one in `lib/prisma`. You could just copy `.env.example` and rename it to `.env` and fill it with your own values.
 
 ## Alternatives
 
