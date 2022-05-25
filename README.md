@@ -1,6 +1,6 @@
 # Nest Prisma Monorepo
 
-This template is what I came up with after I learned about monorepos and played with them for a while, hope you find it helpful!
+This template is what I came up with after I learned about monorepos and played with them for a while, hope you find it helpful! I recommend you use one of the [alternatives](#alternatives).
 
 ## About
 
@@ -92,4 +92,5 @@ After you clone the template, you gotta create two environment files, one in `ap
 
 ## Alternatives
 
-- https://nx.dev/ (Currently, I just use NX. I didn't know about NX while making this template)
+- [Turborepo](https://turborepo.org/)
+- [NX](https://nx.dev/)
