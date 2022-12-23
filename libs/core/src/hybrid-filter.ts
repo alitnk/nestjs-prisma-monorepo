@@ -24,7 +24,7 @@ export abstract class HybridExceptionFilter<TInput = any>
    * @param host
    * @returns returns a boolean
    */
-  isQraphql(host: ArgumentsHost) {
+  isGraphql(host: ArgumentsHost) {
     return (host.getType() as string) === 'graphql';
   }
 
